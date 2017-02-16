@@ -1,5 +1,5 @@
 {
-  "name": "accordion.js",
+  "name": "accordion-js",
   "description": "Displays collapsible content panels for presenting information.",
   "main": "src/accordion.js",
   "scripts": {
