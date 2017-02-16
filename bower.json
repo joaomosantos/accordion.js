@@ -1,0 +1,21 @@
+{
+  "name": "accordion.js",
+  "description": "Displays collapsible content panels for presenting information.",
+  "main": "src/accordion.js",
+  "authors": [
+    "Max Oliveira <joaomosantos@outlook.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://joaomosantos.github.io/accordion.js/",
+  "ignore": [
+    "node_modules",
+    "bower_components",
+    ".bowerrc",
+    "gulpfile.js",
+    "package.json"
+  ],
+  "devDependencies": {
+    "normalize-css": "^5.0.0",
+    "jquery": ">=1.7"
+  }
+}
