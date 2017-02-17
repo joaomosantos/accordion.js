@@ -24,8 +24,8 @@ $('.accordion').accordion();
 Name             | Default                    | Type    | Description
 :----------------|:---------------------------|:--------|:-----------
 transitionSpeed  | `400`                      | int     | Transition speed on miliseconds.
-controlElement   | `'$('.accordion-control')'`| string  | Element that will act as a button.      
-contentElement   | `'$('.accordion-content')'`| string  | Element that contains hide/show content.
+controlElement   | `$('.accordion-control')`  | element | Element that will act as a button.      
+contentElement   | `$('.accordion-content')`  | element | Element that contains hide/show content.
 
 ### Sample Structure
 
@@ -39,6 +39,7 @@ For a simple accordion/dropdown, use the following structure:
 		...
 	</div>
 </div>
+
 <div class="accordion">
 	<div class="accordion-control">...</div>
 	<div class="accordion-content">
@@ -60,6 +61,7 @@ $('#accordion').accordion();
 		...
 		...
 	</div>
+	
 	<div class="accordion-control">...</div>
 	<div class="accordion-content">
 		...
