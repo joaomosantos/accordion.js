@@ -3,18 +3,18 @@
 
 	$.fn.accordion = function(options) {
 		var defaults = {
-			title: $('.title-accordion'),
-			text: $('.text-accordion'),
-			duration: 'slow'
+			controlElement: $('.accordion-control'),
+			contentElement: $('.accordion-content'),
+			transitionSpeed: 400
 		};
 
 		var settings = $.extend({}, defaults, options);
 
 		return this.each(function() {
-			$(this).find(settings.text).css('display', 'none');
-			$(this).find(settings.title).click(function(event) {
+			$(this).find(settings.contentElement).css('display', 'none');
+			$(this).find(settings.controlElement).click(function(event) {
 				event.preventDefault();
-				$(this).next().slideToggle(settings.duration);
+				$(this).next().slideToggle(settings.transitionSpeed);
 			});
 		});
 	};
