@@ -1,0 +1,58 @@
+// Estrutura
+.content-container
+	width 100%
+	padding 0 0 1em
+	.inner-content
+		max-width 1200px
+		padding 0 1em
+		margin auto
+		
+// Header		
+.logo
+	width 50%
+	margin auto
+	.logo-text
+		text-indent -999em
+		display inline-block
+
+.title-header
+.text-header
+	text-align center
+
+// Footer
+#footer-container
+	padding .5em 0
+	background-color $title
+	overflow hidden
+	
+.container-icons
+	float right
+	@media (max-width: 420px)
+		float none
+		text-align center
+
+.icon-footer
+	width 32px
+	height 32px
+	margin 0 .5em
+	display inline-block
+	line-height 66px
+	opacity .7
+	transition all .8s ease
+	@media (max-width: 420px)
+		line-height initial
+	&:hover
+		opacity 1
+	img
+		width 100%
+
+.text-footer
+	float left
+	@media (max-width: 420px)
+		float none
+		text-align center
+	a
+		color $default
+		text-decoration none
+		&:hover
+			text-decoration underline

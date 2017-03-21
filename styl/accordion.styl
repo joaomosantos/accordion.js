@@ -1,0 +1,30 @@
+.accordion
+	margin 1em 0
+	.accordion-control
+		padding 1em
+		background-color: $title
+		cursor pointer
+		position relative
+		&:before
+		&:after
+			content ''
+			position absolute
+			top 0
+			bottom 0
+			margin auto
+			background-color $default
+		&:before
+			right 1em
+			width 14px
+			height 4px
+		&:after
+			right 1.3em
+			width 4px
+			height 14px
+	.accordion-control.opened
+		&:after
+			display none
+	.accordion-content
+		display none
+		padding 1em
+		background-color: darken($title, 10)

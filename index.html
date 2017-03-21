@@ -1,12 +1,113 @@
 <!DOCTYPE html>
-<html class="no-js" lang="pt-br">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <title>Accordion.js</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Accordion.js is a lightweight and simple plugin based on jQuery, displays flexible content dashboards for displaying information.">
+	<meta name="keywords" content="Accordion.js, accordion.js, acordeão, jQuery, plugin jQuery, lightweight, lightweight accordion, simple, simple accordion, accordion, jQuery accordion, jquery accordion, accordion I7+, accordion I8+, accordion responsive, accordion responsivo">
+
+	<title>Accordion.js</title>
+
+	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	
+	<link rel="stylesheet" href="css/vendor/normalize.css">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="css/vendor/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  <h1>Coming soon, Accordion.js</h1>
+
+	<div id="header-container" class="content-container">
+		<div class="inner-content">
+			<h1 class="logo">
+				<span class="logo-text">Accordion.js</span>
+				<a href="https://joaomosantos.github.io/accordion.js/" target="_self">
+					<img src="images/logo.svg" alt="Accordion.js">
+				</a>
+			</h1>
+			<h2 class="title-header">Accordion.js is a lightweight and simple plugin based on jQuery.</h2>
+			<p class="text-header">Supports IE7+ and modern browsers and support jQuery version >= 1.7.x.</p>
+		</div>
+	</div>
+
+	<div id="started-container" class="content-container">
+		<div class="inner-content">
+			<h3>Getting Started</h3>
+			<p>Package Manager:</p>
+			<pre><code class="javascript">bower install --save accordion-js</code></pre>
+			<p>Usage:</p>
+			<pre><code class="javascript"><span class="keyword">$</span>(<span class="element">'.accordion'</span>).<span class="keyword">accordion</span>();</code></pre>
+			<p>For a simple accordion/dropdown, use the following structure:</p>
+			<pre><code class="html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"accordion"</span>&gt;</span><br> <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"accordion-control"</span>&gt;</span>...<span class="tag">&lt;/<span class="title">div</span>&gt;</span><br> <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"accordion-content"</span>&gt;</span><br>  // content<br>  // content<br> <span class="tag">&lt;/<span class="title">div</span>&gt;</span><br><span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre>
+		</div>
+	</div>
+
+	<div id="demo-container" class="content-container">
+		<div class="inner-content">
+			<h3>Demo</h3>
+			<div class="accordion">
+				<div class="accordion-control">1º Title Accordion</div>
+				<div class="accordion-content">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere voluptatem ratione accusamus, explicabo maxime, tempore rem ut, dicta enim aliquam aperiam nihil. Iste facilis error quos? Similique, hic eaque reprehenderit.
+				</div>
+			</div>
+			<div class="accordion">
+				<div class="accordion-control">2º Title Accordion</div>
+				<div class="accordion-content">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere voluptatem ratione accusamus, explicabo maxime, tempore rem ut, dicta enim aliquam aperiam nihil. Iste facilis error quos? Similique, hic eaque reprehenderit.
+				</div>
+			</div>
+			<div class="accordion">
+				<div class="accordion-control">3º Title Accordion</div>
+				<div class="accordion-content">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere voluptatem ratione accusamus, explicabo maxime, tempore rem ut, dicta enim aliquam aperiam nihil. Iste facilis error quos? Similique, hic eaque reprehenderit.
+				</div>
+			</div>
+			<div class="accordion">
+				<div class="accordion-control">4º Title Accordion</div>
+				<div class="accordion-content">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere voluptatem ratione accusamus, explicabo maxime, tempore rem ut, dicta enim aliquam aperiam nihil. Iste facilis error quos? Similique, hic eaque reprehenderit.
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="settings-container" class="content-container">
+		<div class="inner-content">
+			<h3>Settings</h3>
+			<p><strong>transitionSpeed</strong></p>
+			<p>Transition speed on miliseconds.</p>
+			<pre><code class="javascript"><span class="option">type:</span> <span class="element"><span class="element">int</span></span><br><span class="option">default:</span> <span class="keyword">400</span></code></pre>
+			<p><strong>controlElement</strong></p>
+			<p>Element that will act as a button.</p>
+			<pre><code class="javascript"><span class="option">type:</span> <span class="element">element</span><br><span class="option">default:</span> <span class="keyword">$</span>(<span class="element">'.accordion-control'</span>)</code></pre>
+			<p><strong>contentElement</strong></p>
+			<p>Element that contains hide/show content.</p>
+			<pre><code class="javascript"><span class="option">type:</span> <span class="element">element</span><br><span class="option">default:</span> <span class="keyword">$</span>(<span class="element">'.accordion-content'</span>)</code></pre>
+		</div>
+	</div>
+
+	<div id="footer-container" class="content-container">
+		<div class="inner-content">
+			<p class="text-footer">Designed and built by: <a href="https://github.com/joaomosantos" target="_blank"><strong>Max Oliveira</strong>.</a></p>
+			<div class="container-icons">
+				<a href="https://github.com/joaomosantos/accordion.js" target="_blank" class="icon-footer">
+					<img src="images/github.svg" title="View On Github" alt="View On Github">
+				</a>
+				<a href="https://github.com/joaomosantos/accordion.js/archive/master.zip" target="_blank" class="icon-footer">
+					<img src="images/download.svg" title="Download Now" alt="Download Now">
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	<script src="js/vendor/jquery.min.js"></script>
+	<script src="js/vendor/highlight.pack.js"></script>
+	<script src="js/vendor/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="js/accordion.min.js"></script>
+	<script src="js/main.js"></script>
 </body>
 </html>
