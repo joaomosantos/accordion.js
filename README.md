@@ -3,8 +3,7 @@ Accordion.js
 
 Accordion.js is a lightweight and simple plugin based on jQuery. [Try out the demo](//joaomosantos.github.io/accordion.js).
 
-Supports IE7+ and modern browsers.
-Support jQuery version >= 1.7.x.
+Supports IE7+ and modern browsers and Support jQuery version >= 1.7.x.
 
 #### Package Manager
 
@@ -19,7 +18,7 @@ bower install --save accordion-js
 $('.accordion').accordion();
 ```
 
-### Options
+### Settings
 
 Name             | Default                    | Type    | Description
 :----------------|:---------------------------|:--------|:-----------
@@ -35,16 +34,8 @@ For a simple accordion/dropdown, use the following structure:
 <div class="accordion">
 	<div class="accordion-control">...</div>
 	<div class="accordion-content">
-		...
-		...
-	</div>
-</div>
-
-<div class="accordion">
-	<div class="accordion-control">...</div>
-	<div class="accordion-content">
-		...
-		...
+		// content
+		// content
 	</div>
 </div>
 ```

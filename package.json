@@ -1,7 +1,7 @@
 {
   "name": "accordion-js",
   "description": "Displays collapsible content panels for presenting information.",
-  "main": "src/accordion.js",
+  "main": "src/accordion.min.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

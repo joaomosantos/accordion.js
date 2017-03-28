@@ -1,4 +1,4 @@
-/* accordion.js v1.0.0 | MIT License | https://github.com/joaomosantos/accordion.js */
+/* accordion.js v1.0.1 | MIT License | https://github.com/joaomosantos/accordion.js */
 (function() {
 
 	$.fn.accordion = function(options) {
@@ -14,7 +14,7 @@
 			$(this).find(settings.contentElement).css('display', 'none');
 			$(this).find(settings.controlElement).click(function(event) {
 				event.preventDefault();
-				$(this).next().slideToggle(settings.transitionSpeed);
+				$(this).next().stop().slideToggle(settings.transitionSpeed);
 			});
 		});
 	};

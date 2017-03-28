@@ -1,7 +1,7 @@
 {
   "name": "accordion-js",
   "description": "Displays collapsible content panels for presenting information.",
-  "main": "src/accordion.js",
+  "main": "src/accordion.min.js",
   "authors": [
     "Max Oliveira <joaomosantos@outlook.com>"
   ],
