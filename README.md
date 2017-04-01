@@ -48,7 +48,7 @@ For a simple accordion/dropdown, use the following structure:
  </div>
 </div>
 ```
-Example usage javascript:
+Example settings javascript:
 
 ```js
   $('.accordion').accordion({
