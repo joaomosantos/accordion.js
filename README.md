@@ -22,9 +22,18 @@ $('.accordion').accordion();
 
 Name             | Default                    | Type    | Description
 :----------------|:---------------------------|:--------|:-----------
-transitionSpeed  | `400`                      | int     | Transition speed on miliseconds.
 controlElement   | `$('.accordion-control')`  | element | Element that will act as a button.      
 contentElement   | `$('.accordion-content')`  | element | Element that contains hide/show content.
+transitionSpeed  | `400`                      | int     | Transition speed on miliseconds.
+ease             | `swing`                    | string  | The type of "easing" to use during transitions.
+multipleCollapse | `true`                     | boolean | Element that contains hide/show content.
+
+### Callbacks
+
+Name        | Type            | Description
+:-----------|:----------------|:-----------
+onOpened    | function(el) {} | Executes immediately after the accordion is fully opened.      
+onClosed    | function(el) {} | Executes immediately after the accordion is fully closed.
 
 ### Sample Structure
 
@@ -38,4 +47,21 @@ For a simple accordion/dropdown, use the following structure:
 		// content
 	</div>
 </div>
+```
+Example javascript
+
+```js
+  $('.accordion').accordion({
+    controlElement: element,
+    contentElement: element,
+    transitionSpeed: int, 
+    ease: string,
+    multipleCollapse: boolean,
+    onOpened: function(el) { 
+      console.log(el); 
+    },
+    onClosed: function(el) { 
+      console.log(el); 
+    }
+  });
 ```
