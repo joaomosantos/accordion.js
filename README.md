@@ -41,11 +41,11 @@ For a simple accordion/dropdown, use the following structure:
 
 ```html
 <div class="accordion">
-  <div class="accordion-control">...</div>
-	<div class="accordion-content">
+ <div class="accordion-control">...</div>
+ <div class="accordion-content">
   // content
   // content
-	</div>
+ </div>
 </div>
 ```
 Example usage javascript:
