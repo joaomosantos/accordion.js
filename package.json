@@ -1,0 +1,22 @@
+{
+  "name": "accordion-js",
+  "description": "Displays collapsible content panels for presenting information.",
+  "main": "src/accordion.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joaomosantos/accordion.js"
+  },
+  "author": {
+    "name": "Max Oliveira",
+    "email": "joaomosantos@outlook.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sourcemaps": "^2.5.0",
+    "gulp-stylus": "^2.6.0"
+  }
+}
