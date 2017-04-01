@@ -43,8 +43,8 @@ For a simple accordion/dropdown, use the following structure:
 <div class="accordion">
   <div class="accordion-control">...</div>
 	<div class="accordion-content">
-    // content
-		// content
+  // content
+  // content
 	</div>
 </div>
 ```
