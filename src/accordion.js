@@ -74,8 +74,13 @@
 
 		var collapse = function(elementCurrent, elementPrevious) {
 			var isOpened = elementCurrent.hasClass('opened');
-			if(isOpened === false) {
-				if(settings.multipleCollapse === false && elementPrevious !== null) {
+			if(isOpened) {
+				elementCurrent.next().stop().slideUp(settings.transitionSpeed, settings.ease, function() {
+					elementCurrent.removeClass('opened');
+					settings.onClosed(elementCurrent);
+				});
+			} else {
+				if(!settings.multipleCollapse && elementPrevious !== null) {
 					elementPrevious.next().stop().slideUp(settings.transitionSpeed, settings.ease, function() {
 						elementPrevious.removeClass('opened');
 					});
@@ -83,11 +88,6 @@
 				elementCurrent.next().stop().slideDown(settings.transitionSpeed, settings.ease, function() {
 					elementCurrent.addClass('opened');
 					settings.onOpened(elementCurrent);
-				});
-			} else if(isOpened === true) {
-				elementCurrent.next().stop().slideUp(settings.transitionSpeed, settings.ease, function() {
-					elementCurrent.removeClass('opened');
-					settings.onClosed(elementCurrent);
 				});
 			}
 		};
