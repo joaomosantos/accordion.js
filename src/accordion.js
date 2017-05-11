@@ -73,8 +73,8 @@
 		});
 
 		var collapse = function(elementCurrent, elementPrevious) {
-			var isOpen = elementCurrent.hasClass('opened');
-			if(isOpen === false) {
+			var isOpened = elementCurrent.hasClass('opened');
+			if(isOpened === false) {
 				if(settings.multipleCollapse === false && elementPrevious !== null) {
 					elementPrevious.next().stop().slideUp(settings.transitionSpeed, settings.ease, function() {
 						elementPrevious.removeClass('opened');
@@ -84,7 +84,7 @@
 					elementCurrent.addClass('opened');
 					settings.onOpened(elementCurrent);
 				});
-			} else if(isOpen === true) {
+			} else if(isOpened === true) {
 				elementCurrent.next().stop().slideUp(settings.transitionSpeed, settings.ease, function() {
 					elementCurrent.removeClass('opened');
 					settings.onClosed(elementCurrent);
