@@ -93,7 +93,7 @@
 		};
 
 		return this.each(function() {
-			$(this).find(settings.contentElement).css('display', 'none');
+			$(this).find(settings.contentElement).hide();
 			$(this).find(settings.controlElement).click(function(event) {
 				event.preventDefault();
 				collapse($(this), previous);
