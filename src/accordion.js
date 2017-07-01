@@ -13,12 +13,12 @@
 			onOpened: function(el) {},
 			onClosed: function(el) {}
 		};
-		
+
 		var settings = $.extend(defaults, options);
 
 		$.extend($.easing, {
 			back: function (x, t, b, c, d, s) {
-				if (s == undefined) s = 1.70158; 
+				if (s == undefined) s = 1.70158;
 				if ((t /= d / 2) < 1) return c / 2 * (t * t * (((s *= (1.525)) +1) * t - s)) + b;
 				return c / 2 * ((t -= 2) * t * (((s *= (1.525)) + 1) * t + s) + 2) + b;
 			},
@@ -73,8 +73,8 @@
 		});
 
 		var collapse = function(elementCurrent, elementPrevious) {
-			var isOpened = elementCurrent.hasClass('opened');
-			if(isOpened) {
+			var isOpen = elementCurrent.hasClass('opened');
+			if(isOpen) {
 				elementCurrent.next().stop().slideUp(settings.transitionSpeed, settings.ease, function() {
 					elementCurrent.removeClass('opened');
 					settings.onClosed(elementCurrent);
