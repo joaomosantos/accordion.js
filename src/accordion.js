@@ -72,22 +72,25 @@
 			}
 		});
 
-		var collapse = function(elementCurrent, elementPrevious) {
+		var collapse = function(current, previous) {
+			var elementCurrent = $(current);
+			var elementPrevious = $(previous);
 			var isOpen = elementCurrent.hasClass('opened');
-			if(isOpen) {
-				elementCurrent.next().stop().slideUp(settings.transitionSpeed, settings.ease, function() {
-					elementCurrent.removeClass('opened');
-					settings.onClosed(elementCurrent);
-				});
-			} else {
-				if(!settings.multipleCollapse && elementPrevious !== null) {
-					elementPrevious.next().stop().slideUp(settings.transitionSpeed, settings.ease, function() {
-						elementPrevious.removeClass('opened');
-					});
-				}
-				elementCurrent.next().stop().slideDown(settings.transitionSpeed, settings.ease, function() {
+			if(!isOpen) {
+				elementCurrent.next().slideDown(settings.transitionSpeed, settings.ease, function() {
 					elementCurrent.addClass('opened');
 					settings.onOpened(elementCurrent);
+					if(!settings.multipleCollapse && elementPrevious !== null && current !== previous) {
+						elementPrevious.next().slideUp(settings.transitionSpeed, settings.ease, function() {
+							elementPrevious.removeClass('opened');
+							settings.onClosed(elementPrevious);
+						});
+					}
+				});
+			} else {
+				elementCurrent.next().slideUp(settings.transitionSpeed, settings.ease, function() {
+					elementCurrent.removeClass('opened');
+					settings.onClosed(elementCurrent);
 				});
 			}
 		};
@@ -96,8 +99,8 @@
 			$(this).find(settings.contentElement).hide();
 			$(this).find(settings.controlElement).click(function(event) {
 				event.preventDefault();
-				collapse($(this), previous);
-				previous = $(this);
+				collapse(this, previous);
+				previous = this;
 			});
 		});
 	};
