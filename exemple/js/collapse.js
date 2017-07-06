@@ -1,9 +1,9 @@
 $(function() {
-  $('[data-multiple]').accordion({
-    multipleCollapse: true // Value Default
-  });
-
-  $('[data-one]').accordion({
-    multipleCollapse: false
+  var collapse = { 'one': false, 'multiple': true };
+  $.each(collapse, function(key, value) {
+    var data = '[data-' + key + ']';
+    $(data).accordion({
+      multipleCollapse: value
+    });
   });
 });
