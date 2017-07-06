@@ -80,13 +80,13 @@
 				elementCurrent.next().slideDown(settings.transitionSpeed, settings.ease, function() {
 					elementCurrent.addClass('opened');
 					settings.onOpened(elementCurrent);
-					if(!settings.multipleCollapse && elementPrevious !== null && current !== previous) {
-						elementPrevious.next().slideUp(settings.transitionSpeed, settings.ease, function() {
-							elementPrevious.removeClass('opened');
-							settings.onClosed(elementPrevious);
-						});
-					}
 				});
+				if(!settings.multipleCollapse && elementPrevious !== null && current !== previous) {
+					elementPrevious.next().slideUp(settings.transitionSpeed, settings.ease, function() {
+						elementPrevious.removeClass('opened');
+						settings.onClosed(elementPrevious);
+					});
+				}
 			} else {
 				elementCurrent.next().slideUp(settings.transitionSpeed, settings.ease, function() {
 					elementCurrent.removeClass('opened');
