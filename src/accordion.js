@@ -1,4 +1,4 @@
-/* accordion.js v1.1.0 | MIT License | https://github.com/joaomosantos/accordion.js */
+/* accordion.js v1.1.1 | MIT License | https://github.com/joaomosantos/accordion.js */
 ;(function($) {
 
 	$.fn.accordion = function(options) {

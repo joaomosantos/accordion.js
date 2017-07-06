@@ -1,5 +1,10 @@
 # Changes to accordion.js
 
+### 1.1.1 (July 06, 2017)
+
+* Fixing a bug when clicking repeatedly.
+* Other improvements.
+
 ### 1.1.0 (April 01, 2017)
 
 * Adding alias `$`, Avoiding Conflicts with Other Libraries.
