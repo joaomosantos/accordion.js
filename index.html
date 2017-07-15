@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
 	<meta name="google-site-verification" content="g-XgYdrD4iCPQVdItOfLtIpAIGOD1lyYMk2jlEGV__c" />
 	<meta charset="UTF-8">
@@ -12,7 +12,7 @@
 
 	<link rel="apple-touch-icon" href="apple-touch-icon.png">
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
-	
+
 	<link rel="stylesheet" href="css/vendor/normalize.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -43,6 +43,15 @@
 			<pre><code class="javascript"><span class="keyword">$</span>(<span class="element">'.accordion'</span>).<span class="keyword">accordion</span>();</code></pre>
 			<p>For a simple accordion/dropdown, use the following structure:</p>
 			<pre><code class="html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"accordion"</span>&gt;</span><br> <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"accordion-control"</span>&gt;</span>...<span class="tag">&lt;/<span class="title">div</span>&gt;</span><br> <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"accordion-content"</span>&gt;</span><br>  // content<br>  // content<br> <span class="tag">&lt;/<span class="title">div</span>&gt;</span><br><span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre>
+		</div>
+	</div>
+
+	<div id="helper-class" class="content-container">
+		<div class="inner-content">
+			<h3>Helper Class</h3>
+			<p>Use figures to display the states of the accordion.</p>
+			<p>Simple example of use of class <u>.opened</u></p>
+			<pre><code class="css"><span class="element">.accordion-control</span> &#123;<br> <span class="property">background-image:</span> <span class="value">url('plus.svg');</span><br>&#125;<br><br><span class="element">.accordion-control</span><span class="element-highlight">.opened</span> &#123;<br> <span class="property">background-image:</span> <span class="value">url('minus.svg');</span><br>&#125;</code></pre>
 		</div>
 	</div>
 
@@ -97,15 +106,15 @@
 		</div>
 	</div>
 
-	<div id="settings-container" class="content-container">
+	<div id="callback-container" class="content-container">
 		<div class="inner-content">
 			<h3>Callbacks</h3>
 			<p><strong>onOpened</strong></p>
 			<p>Executes immediately after the accordion is fully opened. <a href="exemple/callback.html" target="_self">[Try out the demo]</a></p>
-			<pre><code class="javascript"><span class="option">type:</span> <span class="element">function() {}</span><br><span class="option">options:</span> <span class="keyword">function(</span>el<span class="keyword">)</span> {</span> // your code here <span class="keyword">}</span><br>argument:<br> el: current element clicked.</code></pre>
+			<pre><code class="javascript"><span class="option">type:</span> <span class="element">function() &#123;&#125;</span><br><span class="option">options:</span> <span class="keyword">function(</span>el<span class="keyword">) &#123;</span> // your code here <span class="keyword">&#125;</span><br>argument:<br> el: current element clicked.</code></pre>
 			<p><strong>onClosed</strong></p>
 			<p>Executes immediately after the accordion is fully closed. <a href="exemple/callback.html" target="_self">[Try out the demo]</a></p>
-			<pre><code class="javascript"><span class="option">type:</span> <span class="element">function() {}</span><br><span class="option">options:</span> <span class="keyword">function(</span>el<span class="keyword">)</span> {</span> // your code here <span class="keyword">}</span><br>argument:<br> el: current element clicked.</code></pre>
+			<pre><code class="javascript"><span class="option">type:</span> <span class="element">function() &#123;&#125;</span><br><span class="option">options:</span> <span class="keyword">function(</span>el<span class="keyword">) &#123;</span> // your code here <span class="keyword">&#125;</span><br>argument:<br> el: current element clicked.</code></pre>
 		</div>
 	</div>
 
@@ -122,7 +131,7 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<script src="js/vendor/jquery.min.js"></script>
 	<script src="js/vendor/highlight.pack.js"></script>
 	<script src="js/vendor/jquery.mCustomScrollbar.concat.min.js"></script>
